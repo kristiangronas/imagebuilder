@@ -166,7 +166,7 @@ class BuildFunctions(object):
                '--var', avail_zone_var,
                '--var', provision_script_var,
                '--var', manifest_path_var,
-               os.path.join(self.template_dir, 'template')]
+               os.path.join(self.template_dir, 'template.pkr.hcl')]
         logging.debug(cmd)
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         with process.stdout:
